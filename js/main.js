@@ -22,12 +22,12 @@ async function main() {
       let avatar = response.data[i].avatar;
  
       tabelaHtml += `      
-      <tr>
-          <td>${id}</td>
+      <tr class="${id}">
+          <td ">${id}</td>
           <td>${email}</td>
           <td>${nome}</td>
           <td>${sobrenome}</td>
-          <td>${avatar}</td>
+          <td><img src="${avatar}"/></td>
         </tr>
       `;       
     }
@@ -37,19 +37,22 @@ async function main() {
     console.log("Erro");
   } 
 }
-let tabela = document.querySelector(".tabela");
+var tabela = document.querySelector(".tabela");
 let linhas = tabela.getElementsByTagName("tr");
 
-function selecionarLinha() {
-  tabela.addEventListener("click", () => {
-    
-  })
+tabela.addEventListener("click", () => {
   
+  console.log(linhas);
+
+});
  
-}
+  
+
+ 
+
 
 main();
-selecionarLinha();
+
 
 
 
