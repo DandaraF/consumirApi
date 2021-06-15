@@ -1,17 +1,39 @@
 @import "./reset.scss";
+html {
+  font-size: 10px;
+}
 
 .conteudo {
+  width: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.5rem;
+
+  h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
   table {
     width: 80%;
-    height: 100%;
+
     th {
       border: 1px solid rgb(0, 0, 0);
+      background-color: rgb(45, 88, 75);
+      color: rgb(255, 255, 255);
+      padding: 8px;
+    }
+    tr:hover td {
+      background-color: rgb(153, 152, 152);
+    }
+    tr.selecionado td {
+      background-color: rgb(100, 34, 43);
     }
     td {
       text-align: center;
-      background-color: aqua;
+      background-color: rgb(236, 236, 236);
+      cursor: pointer;
     }
   }
 }

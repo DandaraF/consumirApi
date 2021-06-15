@@ -1,7 +1,7 @@
 
 async function main() {
   try {
-    const responseAsync = await fetch("https://reqres.in/api/users?page=2");
+    const responseAsync = await fetch("https://reqres.in/api/users?page=1");
     const response = await responseAsync.json();
     const tabela = document.querySelector(".tabela");
 
@@ -29,16 +29,29 @@ async function main() {
           <td>${sobrenome}</td>
           <td>${avatar}</td>
         </tr>
-      `;
-          
+      `;       
     }
     tabela.innerHTML = tabelaHtml;
-    // console.log(response);
+
   } catch (error) {
     console.log("Erro");
   } 
 }
+let tabela = document.querySelector(".tabela");
+let linhas = tabela.getElementsByTagName("tr");
+
+function selecionarLinha() {
+  tabela.addEventListener("click", () => {
+    
+  })
+  
+ 
+}
+
 main();
+selecionarLinha();
+
+
 
 
     
