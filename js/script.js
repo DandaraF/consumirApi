@@ -5,8 +5,8 @@ async function main() {
   try {
     const responseAsync = await fetch("https://reqres.in/api/users?page=1");
     const response = await responseAsync.json();
-    // const pessoa = resposta.data;
 
+    
     for (let i = 0; i < (response.data).length; i++) {
       let id = response.data[i].id;
       let email = response.data[i].email;
@@ -50,6 +50,7 @@ function abrirModal() {
 function fecharModal() {
   const modal = document.getElementById("dvModal");
   modal.style.display = "none";
+  console.log(idsel);
 }
 
 main();

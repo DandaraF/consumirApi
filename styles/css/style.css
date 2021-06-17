@@ -89,7 +89,7 @@ html {
   padding: 10px;
   padding-bottom: 25px;
 }
-.modal .modalContent .modalBody .fotoUsuario {
+.modal .modalContent .modalBody img {
   border-radius: 50%;
 }
 .modal .modalContent .modalBody .informacaoUsuario {
