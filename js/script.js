@@ -1,5 +1,4 @@
 const tabela = document.querySelector(".tabela");
-const modal = document.querySelector(".modal");
 
 async function main() {
   try {
@@ -21,6 +20,8 @@ async function main() {
       const textSobrenome = document.createElement("td");
       const textAvatar = document.createElement("td");
       const linkAvatar = document.createElement("img");
+
+      criarTr.setAttribute("class", "linhaTabela");
    
       linkAvatar.setAttribute("src", avatar);
       textId.textContent= id;
@@ -35,8 +36,14 @@ async function main() {
       tabela.appendChild(textEmail);
       tabela.appendChild(textAvatar);
       textAvatar.appendChild(linkAvatar);
-      
-      tabela.addEventListener("click", () => abrirModal()  );
+
+
+      tabela.addEventListener("click", () => {
+        const linha = tabela.getElementsByClassName("linhaTabela");
+        console.log(id);
+
+        abrirModal();
+      }  );
     }
 
   } catch (error) {
@@ -50,7 +57,6 @@ function abrirModal() {
 function fecharModal() {
   const modal = document.getElementById("dvModal");
   modal.style.display = "none";
-  console.log(idsel);
 }
 
 main();
