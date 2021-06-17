@@ -1,4 +1,5 @@
 const tabela = document.querySelector(".tabela");
+const modal = document.querySelector(".modal");
 
 async function main() {
   try {
@@ -35,8 +36,7 @@ async function main() {
       tabela.appendChild(textAvatar);
       textAvatar.appendChild(linkAvatar);
       
-
-      criarTr.addEventListener("click", () => selecionarLinha(textId,textEmail,textNome,textSobrenome,linkAvatar));
+     tabela.addEventListener("click", () => selecionarLinha(textId,textEmail,textNome,textSobrenome,linkAvatar));
     }
 
   } catch (error) {
@@ -44,19 +44,16 @@ async function main() {
   }
 }
 function  selecionarLinha(idSel,emailSel,nomeSel,sobrenomeSel,avatarSel) {
-  const idSelecionado = idSel;
-  const nomeSelecionado = nomeSel;
-  const sobrenomeSelecionado = sobrenomeSel;
-  const emailSelecionado = emailSel;
-  const avatarSelecionado = avatarSel;
 
+  
+  
 }
 
 
-function fechar() {
-  document.getElementById("idModal").style.display = "none";
-  console.log("aqui");
+// function fechar() {
+//   document.getElementById("idModal").style.display = "none";
+//   console.log("aqui");
 
-}
+// }
 
 main();

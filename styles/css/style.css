@@ -13,6 +13,59 @@ html {
   font-size: 10px;
 }
 
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .modal-card {
+  display: flex;
+  justify-content: space-between;
+  width: 80rem;
+  height: 22rem;
+  z-index: 10;
+  opacity: 100;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #2d584b;
+  border: 2px solid #b6b6b6;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  color: #e0e0e0;
+  pointer-events: none;
+  padding: 10px;
+}
+.modal .modal-card .card-selecionado {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+.modal .modal-card .card-selecionado .card-contato {
+  margin-left: 15px;
+}
+.modal .modal-card .card-selecionado p {
+  font-size: 3rem;
+  padding: 2px;
+}
+.modal .modal-card .card-selecionado .fotoUsuario {
+  border-radius: 50%;
+}
+.modal .modal-card .btnFechar {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #f8f8f8;
+  width: auto;
+  height: 40px;
+  border: none;
+  background: #2d584b;
+  text-decoration: none;
+}
+
 .conteudo {
   width: 100%;
   display: flex;
@@ -20,25 +73,6 @@ html {
   flex-direction: column;
   align-items: center;
   font-size: 2.5rem;
-}
-.conteudo .modal {
-  position: fixed;
-  width: 100rem;
-  height: 50rem;
-  z-index: 10;
-  opacity: 100;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #ececec;
-  border: 2px solid #acacac;
-  -webkit-transition: opacity 400ms ease-in;
-  -moz-transition: opacity 400ms ease-in;
-  transition: opacity 400ms ease-in;
-  pointer-events: none;
-}
-.conteudo .modal button {
-  z-index: 100;
-  font-size: 3rem;
-  color: black;
 }
 .conteudo h1 {
   margin-top: 20px;

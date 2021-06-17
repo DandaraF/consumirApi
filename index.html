@@ -8,10 +8,23 @@
     <link rel="stylesheet" href="styles/css/style.css" />
   </head>
   <body>
+    <div class="modal">
+      <div class="modal-card">
+        <div class="card-selecionado">
+          <img
+            class="fotoUsuario"
+            src="https://reqres.in/img/faces/7-image.jpg"
+            alt="Foto Usuário"
+          />
+          <div class="card-contato">
+            <p class="nomeCompleto">Nome Completo</p>
+            <p class="email">email@hotmail.com</p>
+          </div>
+        </div>
+        <button class="btnFechar" onclick="fechar()">X</button>
+      </div>
+    </div>
     <div class="conteudo">
-      <!-- <div id="idModal " class="modal">
-        <button id="btnFechar" onclick="fechar()">X</button>
-      </div> -->
       <h1>Consumindo a API do ReqRes</h1>
       <table id="tabela" class="tabela">
         <tr>
@@ -23,6 +36,7 @@
         </tr>
       </table>
     </div>
+    -->
 
     <script src="js/script.js"></script>
   </body>
