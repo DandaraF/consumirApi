@@ -36,16 +36,17 @@ async function main() {
       tabela.appendChild(textEmail);
       tabela.appendChild(textAvatar);
       textAvatar.appendChild(linkAvatar);
+    }
 
-
-      
-      tabela.addEventListener("click", () => {
-        const linha = tabela.getElementsByClassName("linhaTabela");
-        // (response.data).for
+    tabela.addEventListener("click", () => {
+        resposta.forEach((id,nome,sobrenome,avatar) => {
+          console.log(id);
+        });
+        
 
         abrirModal();
       }  );
-    }
+    
 
   } catch (error) {
     console.log(error);
