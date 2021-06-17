@@ -4,14 +4,14 @@ async function main() {
   try {
     const responseAsync = await fetch("https://reqres.in/api/users?page=1");
     const response = await responseAsync.json();
-
+    const resposta = response.data;
     
-    for (let i = 0; i < (response.data).length; i++) {
-      let id = response.data[i].id;
-      let email = response.data[i].email;
-      let nome = response.data[i].first_name;
-      let sobrenome = response.data[i].last_name;
-      let avatar = response.data[i].avatar;
+    for (let i = 0; i < resposta.length; i++) {
+      let id = resposta[i].id;
+      let email = resposta[i].email;
+      let nome = resposta[i].first_name;
+      let sobrenome = resposta[i].last_name;
+      let avatar = resposta[i].avatar;
       
       const criarTr = document.createElement("tr");
       const textId = document.createElement("td");
@@ -38,9 +38,10 @@ async function main() {
       textAvatar.appendChild(linkAvatar);
 
 
+      
       tabela.addEventListener("click", () => {
         const linha = tabela.getElementsByClassName("linhaTabela");
-        console.log(id);
+        // (response.data).for
 
         abrirModal();
       }  );
