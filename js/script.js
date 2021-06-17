@@ -36,24 +36,20 @@ async function main() {
       tabela.appendChild(textAvatar);
       textAvatar.appendChild(linkAvatar);
       
-     tabela.addEventListener("click", () => selecionarLinha(textId,textEmail,textNome,textSobrenome,linkAvatar));
+      tabela.addEventListener("click", () => abrirModal()  );
     }
 
   } catch (error) {
     console.log(error);
   }
 }
-function  selecionarLinha(idSel,emailSel,nomeSel,sobrenomeSel,avatarSel) {
-
-  
-  
+function abrirModal() {
+  const modal = document.getElementById("dvModal");
+  modal.style.display = "Block";
 }
-
-
-// function fechar() {
-//   document.getElementById("idModal").style.display = "none";
-//   console.log("aqui");
-
-// }
+function fecharModal() {
+  const modal = document.getElementById("dvModal");
+  modal.style.display = "none";
+}
 
 main();

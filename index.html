@@ -8,22 +8,6 @@
     <link rel="stylesheet" href="styles/css/style.css" />
   </head>
   <body>
-    <div class="modal">
-      <div class="modal-card">
-        <div class="card-selecionado">
-          <img
-            class="fotoUsuario"
-            src="https://reqres.in/img/faces/7-image.jpg"
-            alt="Foto Usuário"
-          />
-          <div class="card-contato">
-            <p class="nomeCompleto">Nome Completo</p>
-            <p class="email">email@hotmail.com</p>
-          </div>
-        </div>
-        <button class="btnFechar" onclick="fechar()">X</button>
-      </div>
-    </div>
     <div class="conteudo">
       <h1>API do ReqRes</h1>
       <table id="tabela" class="tabela">
@@ -36,8 +20,28 @@
         </tr>
       </table>
     </div>
-    -->
 
+    <!-----------------------MODAl------------------------->
+    <div id="dvModal" class="modal">
+      <div class="modalContent">
+        <div class="modalHeader">
+          <button class="btnFechar" onclick="fecharModal()">X</button>
+        </div>
+        <div class="modalBody">
+          <img
+            class="fotoUsuario"
+            src="https://reqres.in/img/faces/7-image.jpg"
+            alt="Foto Usuário"
+          />
+          <div class="informacaoUsuario">
+            <p class="nomeCompleto">Nome Completo</p>
+            <p class="email">email@hotmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------------------------------------------->
     <script src="js/script.js"></script>
   </body>
 </html>
