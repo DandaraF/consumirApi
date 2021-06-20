@@ -25,7 +25,7 @@ html {
     }
 
     tr:hover td {
-      background-color: rgb(32, 8, 8);
+      background-color: rgb(211, 211, 211);
     }
     tr.selecionado td {
       background-color: rgb(100, 34, 43);
@@ -68,10 +68,10 @@ html {
         border: none;
         cursor: pointer;
         background-color: rgb(211, 209, 209);
-        color: rgb(146, 7, 7);
+        color: rgb(104, 104, 104);
       }
       .btnFechar:hover {
-        color: rgb(214, 52, 52);
+        color: rgb(165, 165, 165);
       }
     }
 

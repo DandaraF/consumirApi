@@ -21,38 +21,48 @@ async function main() {
       const textAvatar = document.createElement("td");
       const linkAvatar = document.createElement("img");
 
-      criarTr.setAttribute("class", "linhaTabela");
-   
+
       linkAvatar.setAttribute("src", avatar);
+      linkAvatar.setAttribute("class", "imgAvatar");
+      textEmail.setAttribute("class", "tdEmail");
+      textNome.setAttribute("class", "tdNome");
+      textSobrenome.setAttribute("class", "tdSobrenome");
+        
+
       textId.textContent= id;
       textEmail.textContent= email;
-      textNome.textContent=nome;
+      textNome.textContent=`${nome} ${sobrenome}`;
       textSobrenome.textContent = sobrenome;
  
       tabela.appendChild(criarTr);
-      tabela.appendChild(textId);
-      tabela.appendChild(textNome);
-      tabela.appendChild(textSobrenome);
-      tabela.appendChild(textEmail);
-      tabela.appendChild(textAvatar);
+      criarTr.appendChild(textId);
+      criarTr.appendChild(textNome);
+      criarTr.appendChild(textSobrenome);
+      criarTr.appendChild(textEmail);
       textAvatar.appendChild(linkAvatar);
-    }
+      criarTr.appendChild(textAvatar);
+      
+      criarTr.addEventListener("click", (event) => {
+        const usuario = event.target.closest("tr");
 
-    tabela.addEventListener("click", () => {
-        resposta.forEach((id,nome,sobrenome,avatar) => {
-          console.log(id);
-        });
+        const modalBody = document.querySelector(".modalBody");
+
+        
         
 
-        abrirModal();
-      }  );
-    
+        console.log("user =>", modalBody);
+        // abrirModal();
+      });
+
+    }
+
+   
 
   } catch (error) {
     console.log(error);
   }
 }
-function abrirModal() {
+function abrirModal() {    
   const modal = document.getElementById("dvModal");
   modal.style.display = "Block";
 }

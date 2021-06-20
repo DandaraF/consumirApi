@@ -35,7 +35,7 @@ html {
   padding: 8px;
 }
 .conteudo table tr:hover td {
-  background-color: #200808;
+  background-color: lightgray;
 }
 .conteudo table tr.selecionado td {
   background-color: #64222b;
@@ -77,10 +77,10 @@ html {
   border: none;
   cursor: pointer;
   background-color: #d3d1d1;
-  color: #920707;
+  color: #686868;
 }
 .modal .modalContent .modalHeader .btnFechar:hover {
-  color: #d63434;
+  color: #a5a5a5;
 }
 .modal .modalContent .modalBody {
   display: flex;
