@@ -7,7 +7,7 @@ Fazendo um CRUD com sheetDB.
 
 <li>HTML</li>
 <li>SASS</li>
-<li>Sheetdb-js/li>
+<li>Sheetdb-js</li>
 
 
 
